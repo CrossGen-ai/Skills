@@ -1,0 +1,7 @@
+{
+  "skill_name": "{{SKILL_NAME}}",
+  "created": "{{TIMESTAMP}}",
+  "test_cases": [],
+  "pass_threshold": 1.0,
+  "evaluator_model": "sonnet"
+}

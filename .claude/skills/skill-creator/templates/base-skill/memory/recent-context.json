@@ -1,0 +1,14 @@
+{
+  "last_updated": "{{TIMESTAMP}}",
+  "runs": [],
+  "aggregate": {
+    "total_runs": 0,
+    "success_rate": 1.0,
+    "avg_scores": {
+      "completion": 0,
+      "efficiency": 0,
+      "reliability": 0
+    },
+    "trend": "stable"
+  }
+}

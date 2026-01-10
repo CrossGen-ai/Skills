@@ -1,0 +1,10 @@
+{
+  "type": "pattern",
+  "patterns": [
+    {"type": "regex", "value": "(?i)(hello|hi|hey|greetings)"}
+  ],
+  "anti_patterns": [
+    {"type": "contains", "value": "error"},
+    {"type": "contains", "value": "failed"}
+  ]
+}

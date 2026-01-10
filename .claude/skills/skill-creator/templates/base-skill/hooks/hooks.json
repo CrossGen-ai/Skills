@@ -1,0 +1,25 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$(dirname \"$0\")/log-mutation.sh\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Analyze this session for the skill '{{SKILL_NAME}}'. Evaluate: 1) Did it complete the requested task? 2) Were there errors, retries, or timeouts? 3) Was token usage reasonable? 4) Any unexpected patterns? Respond ONLY with JSON: {\"healthy\": bool, \"completion_score\": 1-5, \"efficiency_score\": 1-5, \"reliability_score\": 1-5, \"issues\": [...], \"suggested_fixes\": [...], \"severity\": \"none|low|medium|high\"}"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "pattern",
+  "patterns": [
+    {"type": "file_exists", "path": "hello-world/memory/health-checks.jsonl"},
+    {"type": "regex", "file": "hello-world/memory/health-checks.jsonl", "value": "\"healthy\":\\s*(true|false)"}
+  ],
+  "anti_patterns": [
+    {"type": "contains", "value": "HEALTH_CHECK_CRITICAL"}
+  ]
+}
