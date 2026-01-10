@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+
+# Environment files (contain secrets)
+.skill-creator-env
+
+# Database
+*.db
+
+# Logs
+*.log
+*.jsonl
+
+# Test results
+tests/results/
+
+# OS files
+.DS_Store

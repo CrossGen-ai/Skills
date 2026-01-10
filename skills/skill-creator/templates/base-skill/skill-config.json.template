@@ -1,0 +1,44 @@
+{
+  "name": "{{skill-name}}",
+  "version": "1.0.0",
+  "created": "{{timestamp}}",
+  "state": "DRAFT",
+
+  "healing": {
+    "enabled": true,
+    "auto_heal_threshold": 3,
+    "max_heal_attempts_per_day": 5,
+    "confidence_auto_approve": 0.9,
+    "confidence_require_approval": 0.7
+  },
+
+  "approval": {
+    "channel": "slack",
+    "timeout_hours": 24,
+    "timeout_action": "auto_approve_if_confident",
+    "webhook_url": "${SKILL_SLACK_WEBHOOK}",
+    "escalation": {
+      "after_hours": 48,
+      "method": "repeat_notification"
+    }
+  },
+
+  "eval": {
+    "auto_score_dimensions": ["reliability", "efficiency"],
+    "human_score_dimensions": ["completion", "quality"],
+    "request_feedback_threshold": "significant_runs",
+    "trend_window_days": 14
+  },
+
+  "memory": {
+    "execution_log_retention_days": 30,
+    "consolidation_threshold_runs": 100,
+    "drift_detection_enabled": true
+  },
+
+  "bootstrap": {
+    "max_tdd_iterations": 5,
+    "test_evaluator_model": "sonnet",
+    "require_human_approval_to_deploy": true
+  }
+}

@@ -1,0 +1,51 @@
+---
+name: {{skill-name}}
+description: {{description}}
+---
+
+# {{Skill Name}}
+
+{{Brief overview of what this skill does—2-3 sentences max.}}
+
+## Quick Start
+
+```bash
+claude -p "{{example prompt}}"
+```
+
+## Workflow
+
+1. {{First step}}
+2. {{Second step}}
+3. {{Third step}}
+
+## Configuration
+
+This skill uses `skill-config.json` for:
+- Healing thresholds and behavior
+- Approval workflow settings
+- Memory retention policies
+
+## Memory System
+
+This skill maintains local memory in `memory/`:
+- `lessons.md` — Accumulated learnings (always loaded)
+- `recent-context.json` — Last 10 runs (loaded for healing)
+- `user-feedback.jsonl` — Your eval scores
+
+## Self-Healing
+
+This skill automatically:
+- Monitors its own health via Stop hooks
+- Proposes fixes when issues are detected
+- Requests approval before applying changes
+
+To manually trigger healing: `/skill heal {{skill-name}}`
+
+## References
+
+{{List reference files and when to consult them.}}
+
+## Scripts
+
+{{List scripts and their purposes.}}

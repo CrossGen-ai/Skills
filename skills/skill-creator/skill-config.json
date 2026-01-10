@@ -1,0 +1,42 @@
+{
+  "name": "skill-creator",
+  "version": "1.0.0",
+  "created": "2026-01-10T00:00:00Z",
+  "state": "ACTIVE",
+
+  "healing": {
+    "enabled": false,
+    "reason": "Self-referential healing disabled for safety",
+    "manual_heal_command": "/skill-creator heal-self"
+  },
+
+  "approval": {
+    "channel": "slack",
+    "timeout_hours": 24,
+    "timeout_action": "auto_approve_if_confident",
+    "webhook_url": "${SKILL_SLACK_WEBHOOK}",
+    "escalation": {
+      "after_hours": 48,
+      "method": "repeat_notification"
+    }
+  },
+
+  "eval": {
+    "auto_score_dimensions": ["reliability", "efficiency"],
+    "human_score_dimensions": ["completion", "quality"],
+    "request_feedback_threshold": "significant_runs",
+    "trend_window_days": 14
+  },
+
+  "memory": {
+    "execution_log_retention_days": 30,
+    "consolidation_threshold_runs": 100,
+    "drift_detection_enabled": true
+  },
+
+  "bootstrap": {
+    "max_tdd_iterations": 5,
+    "test_evaluator_model": "sonnet",
+    "require_human_approval_to_deploy": true
+  }
+}

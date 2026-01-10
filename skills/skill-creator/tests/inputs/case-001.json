@@ -1,0 +1,6 @@
+{
+  "prompt": "Create a simple hello-world skill that responds with 'Hello, World!' when invoked",
+  "context_files": [],
+  "environment": {},
+  "timeout_seconds": 120
+}

@@ -1,0 +1,48 @@
+{
+  "skill_name": "skill-creator",
+  "created": "2026-01-10T00:00:00Z",
+  "test_cases": [
+    {
+      "id": "case-001",
+      "name": "Create simple hello-world skill",
+      "description": "Tests basic skill creation with minimal requirements",
+      "input_file": "inputs/case-001.json",
+      "expected_file": "expected/case-001.json",
+      "evaluation_criteria": [
+        "Creates SKILL.md with proper frontmatter",
+        "Creates skill-config.json with valid JSON",
+        "Creates hooks directory with required files",
+        "Creates memory directory with initial files",
+        "All shell scripts are executable"
+      ]
+    },
+    {
+      "id": "case-002",
+      "name": "Create skill with test cases",
+      "description": "Tests skill creation including TDD test generation",
+      "input_file": "inputs/case-002.json",
+      "expected_file": "expected/case-002.json",
+      "evaluation_criteria": [
+        "Creates tests/test-manifest.json",
+        "Creates at least 3 test cases",
+        "Test inputs are valid JSON",
+        "Expected outputs define clear patterns"
+      ]
+    },
+    {
+      "id": "case-003",
+      "name": "Skill directory structure validation",
+      "description": "Validates complete directory structure is created",
+      "input_file": "inputs/case-003.json",
+      "expected_file": "expected/case-003.json",
+      "evaluation_criteria": [
+        "All required directories exist",
+        "All required files are created",
+        "File permissions are correct",
+        "JSON files are valid"
+      ]
+    }
+  ],
+  "pass_threshold": 1.0,
+  "evaluator_model": "sonnet"
+}

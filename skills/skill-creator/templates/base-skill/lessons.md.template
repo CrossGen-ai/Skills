@@ -1,0 +1,23 @@
+# Lessons Learned: {{skill-name}}
+
+> Auto-maintained by skill self-analysis. Last updated: {{timestamp}}
+
+## What Works Well
+
+- {Pattern that consistently succeeds}
+- {Approach that users rate highly}
+
+## Known Pitfalls
+
+- {Situation that causes failures}
+- {Edge case to handle carefully}
+
+## User Preferences
+
+- {Observed preference from feedback}
+- {Style or format users prefer}
+
+## Healing History
+
+| Date | Issue | Fix Applied | Outcome |
+|------|-------|-------------|---------|

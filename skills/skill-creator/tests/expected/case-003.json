@@ -1,0 +1,13 @@
+{
+  "type": "pattern",
+  "patterns": [
+    {"type": "contains", "value": "SKILL.md"},
+    {"type": "contains", "value": "skill-config.json"},
+    {"type": "contains", "value": "hooks"},
+    {"type": "contains", "value": "memory"}
+  ],
+  "anti_patterns": [
+    {"type": "contains", "value": "missing"},
+    {"type": "contains", "value": "not found"}
+  ]
+}

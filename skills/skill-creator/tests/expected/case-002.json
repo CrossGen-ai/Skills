@@ -1,0 +1,12 @@
+{
+  "type": "pattern",
+  "patterns": [
+    {"type": "file_exists", "path": "json-formatter/tests/test-manifest.json"},
+    {"type": "json_path", "path": "$.test_cases", "file": "json-formatter/tests/test-manifest.json"},
+    {"type": "regex", "value": "case-00[1-3]", "file": "json-formatter/tests/test-manifest.json"}
+  ],
+  "anti_patterns": [
+    {"type": "contains", "value": "error"},
+    {"type": "contains", "value": "failed"}
+  ]
+}
