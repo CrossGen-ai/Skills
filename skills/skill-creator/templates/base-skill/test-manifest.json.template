@@ -1,0 +1,20 @@
+{
+  "skill_name": "{{skill-name}}",
+  "created": "{{timestamp}}",
+  "test_cases": [
+    {
+      "id": "case-001",
+      "name": "Basic functionality",
+      "description": "Tests the core use case",
+      "input_file": "inputs/case-001.json",
+      "expected_file": "expected/case-001.json",
+      "evaluation_criteria": [
+        "Output contains expected structure",
+        "No errors in execution",
+        "Completes within 60 seconds"
+      ]
+    }
+  ],
+  "pass_threshold": 1.0,
+  "evaluator_model": "sonnet"
+}

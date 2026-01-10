@@ -1,0 +1,10 @@
+{
+  "type": "pattern",
+  "patterns": [
+    {"type": "regex", "value": "[Hh]ello|[Ww]orld|skill|working"}
+  ],
+  "anti_patterns": [
+    {"type": "contains", "value": "error"},
+    {"type": "contains", "value": "not found"}
+  ]
+}

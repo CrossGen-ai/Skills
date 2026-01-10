@@ -1,0 +1,12 @@
+{
+  "last_updated": "2026-01-10T00:00:00Z",
+  "total_runs": 0,
+  "rolling_averages": {
+    "completion": 0,
+    "efficiency": 0,
+    "reliability": 0,
+    "quality": 0
+  },
+  "trend": "new",
+  "alerts": []
+}

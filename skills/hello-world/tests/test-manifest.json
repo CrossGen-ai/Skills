@@ -1,0 +1,45 @@
+{
+  "skill_name": "hello-world",
+  "created": "2026-01-10T00:00:00Z",
+  "test_cases": [
+    {
+      "id": "case-001",
+      "name": "Basic hello greeting",
+      "description": "Tests that the skill responds with Hello, World!",
+      "input_file": "inputs/case-001.json",
+      "expected_file": "expected/case-001.json",
+      "evaluation_criteria": [
+        "Response contains 'Hello'",
+        "Response contains 'World'",
+        "No errors in execution",
+        "Completes within 10 seconds"
+      ]
+    },
+    {
+      "id": "case-002",
+      "name": "Say hello variant",
+      "description": "Tests 'say hello' trigger phrase",
+      "input_file": "inputs/case-002.json",
+      "expected_file": "expected/case-002.json",
+      "evaluation_criteria": [
+        "Response is a greeting",
+        "Response is friendly",
+        "Completes successfully"
+      ]
+    },
+    {
+      "id": "case-003",
+      "name": "Test skill invocation",
+      "description": "Tests '/hello' command",
+      "input_file": "inputs/case-003.json",
+      "expected_file": "expected/case-003.json",
+      "evaluation_criteria": [
+        "Skill is triggered",
+        "Output confirms skill is working",
+        "No infrastructure errors"
+      ]
+    }
+  ],
+  "pass_threshold": 1.0,
+  "evaluator_model": "sonnet"
+}

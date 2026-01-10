@@ -1,0 +1,12 @@
+{
+  "type": "pattern",
+  "patterns": [
+    {"type": "contains", "value": "Hello"},
+    {"type": "contains", "value": "World"}
+  ],
+  "anti_patterns": [
+    {"type": "contains", "value": "error"},
+    {"type": "contains", "value": "failed"},
+    {"type": "contains", "value": "exception"}
+  ]
+}

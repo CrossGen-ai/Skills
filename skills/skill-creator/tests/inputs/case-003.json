@@ -1,0 +1,8 @@
+{
+  "prompt": "Validate the directory structure of an existing skill",
+  "context_files": [],
+  "environment": {
+    "SKILL_NAME": "hello-world"
+  },
+  "timeout_seconds": 60
+}

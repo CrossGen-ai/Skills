@@ -1,0 +1,14 @@
+{
+  "type": "pattern",
+  "patterns": [
+    {"type": "file_exists", "path": "hello-world/SKILL.md"},
+    {"type": "file_exists", "path": "hello-world/skill-config.json"},
+    {"type": "file_exists", "path": "hello-world/hooks/hooks.json"},
+    {"type": "file_exists", "path": "hello-world/memory/lessons.md"},
+    {"type": "contains", "value": "name: hello-world", "file": "hello-world/SKILL.md"}
+  ],
+  "anti_patterns": [
+    {"type": "contains", "value": "error"},
+    {"type": "contains", "value": "failed"}
+  ]
+}

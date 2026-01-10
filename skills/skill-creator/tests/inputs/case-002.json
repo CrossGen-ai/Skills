@@ -1,0 +1,6 @@
+{
+  "prompt": "Create a skill that formats JSON with proper indentation. Include test cases.",
+  "context_files": [],
+  "environment": {},
+  "timeout_seconds": 180
+}

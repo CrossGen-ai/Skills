@@ -1,0 +1,6 @@
+{
+  "prompt": "Say hello to the world",
+  "context_files": [],
+  "environment": {},
+  "timeout_seconds": 10
+}

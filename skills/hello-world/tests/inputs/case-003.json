@@ -1,0 +1,6 @@
+{
+  "prompt": "/hello",
+  "context_files": [],
+  "environment": {},
+  "timeout_seconds": 10
+}
