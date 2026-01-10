@@ -1,0 +1,47 @@
+{
+  "skill_name": "skill-creator",
+  "created": "2026-01-10T00:00:00Z",
+  "test_cases": [
+    {
+      "id": "case-001",
+      "name": "Create hello-world skill",
+      "description": "Tests basic skill creation with minimal requirements",
+      "input_file": "inputs/case-001.json",
+      "expected_file": "expected/case-001.json",
+      "evaluation_criteria": [
+        "SKILL.md file is created with proper frontmatter",
+        "skill-config.json is created with valid JSON",
+        "hooks/hooks.json is created",
+        "memory/ directory is initialized",
+        "No errors during creation"
+      ]
+    },
+    {
+      "id": "case-002",
+      "name": "Skill directory structure validation",
+      "description": "Validates that created skills have all required directories and files",
+      "input_file": "inputs/case-002.json",
+      "expected_file": "expected/case-002.json",
+      "evaluation_criteria": [
+        "All required directories exist",
+        "All required files are created",
+        "Hook scripts are executable",
+        "Memory files contain valid initial content"
+      ]
+    },
+    {
+      "id": "case-003",
+      "name": "Hook execution test",
+      "description": "Tests that hooks execute correctly and log properly",
+      "input_file": "inputs/case-003.json",
+      "expected_file": "expected/case-003.json",
+      "evaluation_criteria": [
+        "log-mutation.sh captures file changes",
+        "health-check.sh processes health results",
+        "Logs are written to correct locations"
+      ]
+    }
+  ],
+  "pass_threshold": 1.0,
+  "evaluator_model": "sonnet"
+}

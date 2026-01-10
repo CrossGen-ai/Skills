@@ -1,0 +1,15 @@
+{
+  "type": "pattern",
+  "patterns": [
+    {"type": "file_exists", "path": "hello-world/SKILL.md"},
+    {"type": "file_exists", "path": "hello-world/skill-config.json"},
+    {"type": "file_exists", "path": "hello-world/hooks/hooks.json"},
+    {"type": "file_exists", "path": "hello-world/hooks/log-mutation.sh"},
+    {"type": "file_exists", "path": "hello-world/hooks/health-check.sh"},
+    {"type": "file_exists", "path": "hello-world/memory/execution-log.jsonl"},
+    {"type": "file_exists", "path": "hello-world/memory/lessons.md"},
+    {"type": "file_exists", "path": "hello-world/memory/recent-context.json"},
+    {"type": "file_exists", "path": "hello-world/tests/test-manifest.json"}
+  ],
+  "anti_patterns": []
+}

@@ -1,0 +1,1 @@
+{"timestamp": "{{TIMESTAMP}}", "event": "skill_created", "skill": "{{SKILL_NAME}}", "version": "1.0.0"}

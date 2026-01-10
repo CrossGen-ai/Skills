@@ -1,0 +1,8 @@
+{
+  "prompt": "Validate the hello-world skill structure",
+  "context_files": [],
+  "environment": {
+    "SKILL_NAME": "hello-world"
+  },
+  "timeout_seconds": 30
+}

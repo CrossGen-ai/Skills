@@ -1,0 +1,1 @@
+{"timestamp": "{{TIMESTAMP}}", "result": {"healthy": true, "completion_score": 5, "efficiency_score": 5, "reliability_score": 5, "issues": [], "suggested_fixes": [], "severity": "none"}}

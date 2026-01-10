@@ -1,0 +1,8 @@
+{
+  "prompt": "Test hook execution by simulating a health check",
+  "context_files": [],
+  "environment": {
+    "SKILL_NAME": "hello-world"
+  },
+  "timeout_seconds": 30
+}

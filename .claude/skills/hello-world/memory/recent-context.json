@@ -1,0 +1,14 @@
+{
+  "last_updated": "2026-01-10T00:00:00Z",
+  "runs": [],
+  "aggregate": {
+    "total_runs": 0,
+    "success_rate": 1.0,
+    "avg_scores": {
+      "completion": 0,
+      "efficiency": 0,
+      "reliability": 0
+    },
+    "trend": "stable"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "last_updated": "{{TIMESTAMP}}",
+  "window_days": 14,
+  "total_runs": 0,
+  "scores": {
+    "completion": {"average": 0, "min": 0, "max": 0, "trend": "stable"},
+    "efficiency": {"average": 0, "min": 0, "max": 0, "trend": "stable"},
+    "reliability": {"average": 0, "min": 0, "max": 0, "trend": "stable"},
+    "quality": {"average": 0, "min": 0, "max": 0, "trend": "stable"}
+  },
+  "health": {
+    "healthy_runs": 0,
+    "unhealthy_runs": 0,
+    "health_rate": 1.0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "skill_name": "hello-world",
+  "created": "2026-01-10T00:00:00Z",
+  "test_cases": [
+    {
+      "id": "case-001",
+      "name": "Basic greeting response",
+      "description": "Tests that the skill responds to a simple greeting",
+      "input_file": "inputs/case-001.json",
+      "expected_file": "expected/case-001.json",
+      "evaluation_criteria": [
+        "Response contains a greeting",
+        "No errors in execution",
+        "Completes within 10 seconds"
+      ]
+    }
+  ],
+  "pass_threshold": 1.0,
+  "evaluator_model": "sonnet"
+}
