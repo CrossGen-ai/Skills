@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'INPUT=$(cat); SKILL_ROOT=\".claude/skills\"; FILE_PATH=$(echo \"$INPUT\" | jq -r \".tool_input.file_path // .tool_input.path // empty\"); if [[ \"$FILE_PATH\" == *\"$SKILL_ROOT\"* ]]; then SKILL_NAME=$(echo \"$FILE_PATH\" | sed -n \"s|.*$SKILL_ROOT/\\([^/]*\\)/.*|\\1|p\"); if [[ -n \"$SKILL_NAME\" && -d \"$SKILL_ROOT/$SKILL_NAME/memory\" ]]; then echo \"{\\\"timestamp\\\": \\\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\\\", \\\"event\\\": \\\"self_mutation\\\", \\\"tool\\\": \\\"$(echo \"$INPUT\" | jq -r .tool_name)\\\", \\\"file\\\": \\\"$FILE_PATH\\\"}\" >> \"$SKILL_ROOT/$SKILL_NAME/memory/execution-log.jsonl\"; fi; fi'"
+          }
+        ]
+      }
+    ]
+  }
+}
