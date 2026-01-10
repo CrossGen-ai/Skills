@@ -1,6 +1,16 @@
 ---
 name: hello-world
 description: A simple test skill that responds with 'Hello, World!' when invoked. Use this skill for testing the skill infrastructure and as a template for creating new skills. Triggers on '/hello', 'say hello', or 'test skill'.
+hooks:
+  PostToolUse:
+    - matcher: "Write|Edit"
+      hooks:
+        - type: command
+          command: "echo '{\"event\": \"self_mutation\", \"timestamp\": \"'$(date -u +%Y-%m-%dT%H:%M:%SZ)'\"}' >> ~/.claude/skills/hello-world/memory/execution-log.jsonl"
+  Stop:
+    - hooks:
+        - type: prompt
+          prompt: "Analyze this session for the skill 'hello-world'. Evaluate: 1) Did it complete the requested task? 2) Were there errors? 3) Was it efficient? Respond with JSON: {\"healthy\": true, \"score\": 5}"
 ---
 
 # Hello World

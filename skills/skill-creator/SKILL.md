@@ -1,6 +1,16 @@
 ---
 name: skill-creator
 description: Creates self-evolving skills that run, heal, evaluate, and improve themselves with minimal human intervention. Use when creating new skills with TDD bootstrap, hooks, memory systems, and self-healing capabilities. Triggers on '/skill create', 'create a skill that...', or 'bootstrap a new skill'.
+hooks:
+  PostToolUse:
+    - matcher: "Write|Edit"
+      hooks:
+        - type: command
+          command: "echo '{\"event\": \"skill_created\", \"timestamp\": \"'$(date -u +%Y-%m-%dT%H:%M:%SZ)'\"}' >> ~/.claude/skills/skill-creator/memory/execution-log.jsonl"
+  Stop:
+    - hooks:
+        - type: prompt
+          prompt: "Evaluate skill creation session. Did the skill get created with all required components (SKILL.md, hooks in frontmatter, memory, tests)? Respond with JSON: {\"complete\": bool, \"components_created\": [...]}"
 ---
 
 # Skill Creator
@@ -29,12 +39,11 @@ When creating a skill, generate the complete directory structure:
 
 ```
 {skill-name}/
-├── SKILL.md                    # Primary skill instructions
+├── SKILL.md                    # Primary skill instructions (hooks defined in frontmatter!)
 ├── skill-config.json           # Configuration and metadata
-├── hooks/
-│   ├── hooks.json              # Hook definitions
-│   ├── log-mutation.sh         # PostToolUse hook
-│   └── health-check.sh         # Stop hook processor
+├── scripts/
+│   ├── log-mutation.sh         # Optional: external script for PostToolUse
+│   └── health-check.sh         # Optional: external script for health processing
 ├── memory/
 │   ├── execution-log.jsonl     # Run history
 │   ├── lessons.md              # Learnings
